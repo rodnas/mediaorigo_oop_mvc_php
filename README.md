@@ -9,3 +9,5 @@ git push -u origin main
 PHP (OOP, MVC) version:
 PHP 7.3.30 
 MySQL\MariaDB 
+
+create database
