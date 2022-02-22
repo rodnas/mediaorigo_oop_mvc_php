@@ -22,3 +22,16 @@ CREATE TABLE `driver` (
   `modify_user_id` bigint(20) UNSIGNED DEFAULT NULL,
   `modify_when` datetime DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+CREATE TABLE `transport` (
+  `id` bigint(11) UNSIGNED NOT NULL,
+  `vehicle_id` int(11) UNSIGNED DEFAULT NULL,
+  `driver_id` int(11) UNSIGNED DEFAULT NULL,
+  `order_date` date DEFAULT NULL,
+  `active` int(1) UNSIGNED DEFAULT 1,
+  `langID` int(2) UNSIGNED NOT NULL DEFAULT 0,
+  `insert_user_id` bigint(20) UNSIGNED DEFAULT NULL,
+  `insert_when` datetime DEFAULT NULL,
+  `modify_user_id` bigint(20) UNSIGNED DEFAULT NULL,
+  `modify_when` datetime DEFAULT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin;

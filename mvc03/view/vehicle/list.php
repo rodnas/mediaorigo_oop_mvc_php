@@ -15,9 +15,9 @@
             <th>Típus</th>
             <th>Rendszám</th>
             <th>Forgalomba helyezés éve</th>
-            <th>Detail</th>
-            <th>Edit</th>
-            <th>Delete</th>
+            <th>Adatok</th>
+            <th>Módosítás</th>
+            <th>Törlés</th>
         </tr>
         <?php foreach ($vehicle as $row): ?>
         <tr>

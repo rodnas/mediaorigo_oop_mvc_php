@@ -14,9 +14,9 @@
             <th>ID</th>
             <th>Név</th>
             <th>Születési év</th>
-            <th>Detail</th>
-            <th>Edit</th>
-            <th>Delete</th>
+            <th>Adatok</th>
+            <th>Módosítás</th>
+            <th>Törlés</th>
         </tr>
         <?php foreach ($driver as $row): ?>
         <tr>

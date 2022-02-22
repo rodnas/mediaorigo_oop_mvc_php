@@ -13,6 +13,9 @@
             <li class="nav-item">
               <a class="nav-link" href="<?php echo URLROOT; ?>/driver">Sofőr</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="<?php echo URLROOT; ?>/transport">Fuvar</a>
+            </li>
           </ul>
         </div>
 
