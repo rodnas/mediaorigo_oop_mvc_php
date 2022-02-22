@@ -12,6 +12,9 @@ MySQL\MariaDB
 
 create database
 
-Modules
+Modules:
+
 Vehicle: http://rodnas/mvc03/index.php/vehicle
-Druóiver: http://rodnas/mvc03/index.php/driver
+
+Driver: http://rodnas/mvc03/index.php/driver
+
