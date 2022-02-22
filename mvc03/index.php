@@ -1,4 +1,8 @@
 <?php
+define('URLROOT', 'http://rodnas/mvc03/index.php');
+
+define('SITENAME', 'mediaorigo OOP MVC');
+
 $request = preg_replace("|/*(.+?)/*$|", "\\1", $_SERVER['PATH_INFO']);
 $uri = explode('/', $request);
 

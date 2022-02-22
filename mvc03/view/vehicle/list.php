@@ -2,6 +2,7 @@
 <?php $title = 'Jármű' 
 ?>
 
+<?php include 'view/inc/header.php'; ?>
 <?php ob_start() ?>
 	<br>
     <center><h1><?= $title ?></h1></center>
@@ -34,5 +35,5 @@
     <br>
     <a href="/mvc03/index.php/vehicle/create" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-plus"></span> Új</a>
 <?php $puffer = ob_get_clean() ?>
-
+<?php require 'view/inc/footer.php'; ?>
 <?php include 'view/template.php' ?>

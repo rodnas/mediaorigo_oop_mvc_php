@@ -1,6 +1,7 @@
 <!-- view/driver/detail.php -->
 <?php $title = 'Sofőr adatok' ?>
 
+<?php include 'view/inc/header.php'; ?>
 <?php ob_start() ?>
     <h1><?= $title ?></h1>
 
@@ -13,4 +14,5 @@
     </dl>
 <?php $puffer = ob_get_clean() ?>
 
+<?php require 'view/inc/footer.php'; ?>
 <?php include 'view/template.php' ?>

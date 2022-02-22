@@ -18,6 +18,7 @@ $valYear = isset($vehicle['year']) ? $vehicle['year'] : '';
 $valId = isset($vehicle['id']) ? $vehicle['id'] : '';
 ?>
 
+<?php include 'view/inc/header.php'; ?>
 <?php ob_start() ?>
     <h1><?= $title ?></h1>
 
@@ -47,4 +48,5 @@ $valId = isset($vehicle['id']) ? $vehicle['id'] : '';
     </form>
 <?php $puffer = ob_get_clean() ?>
 
+<?php require 'view/inc/footer.php'; ?>
 <?php include 'view/template.php' ?>
