@@ -8,9 +8,9 @@
     <a href="/mvc03/index.php/transport" class="btn btn-primary btn-sm">Vissza</a>
     <dl>
         <dt>Jármű : </dt>
-        <dd><?= $transport['vehicle_id'] ?></dd>
+        <dd><?= $vehicle['lpn'] ?></dd>
         <dt>Sofőr : </dt>
-        <dd><?= $transport['driver_id'] ?></dd>
+        <dd><?= $driver['name'] ?></dd>
         <dt>Dátum : </dt>
         <dd><?= $transport['order_date'] ?></dd>
     </dl>

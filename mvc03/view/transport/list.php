@@ -1,5 +1,5 @@
 <!-- view/driver/list.php -->
-<?php $title = 'Sofőr' 
+<?php $title = 'Fuvar' 
 ?>
 
 <?php include 'view/inc/header.php'; ?>
@@ -21,8 +21,9 @@
         </tr>
         <?php foreach ($transport as $row): ?>
         <tr>
-            <td><?= $row['vehicle_id'] ?></td>
-            <td><?= $row['driver_id'] ?></td>
+            <td><?= $row['id'] ?></td>
+            <td><?= $row['vehicleName'] ?></td>
+            <td><?= $row['driverName'] ?></td>
             <td><?= $row['order_date'] ?></td>
             <td><a href="/mvc03/index.php/transport/detail?id=<?= $row['id'] ?>" class="btn btn-success btn-xs"> Adatok</a></td>
             <td><a href="/mvc03/index.php/transport/edit?id=<?= $row['id'] ?>" class="btn btn-warning btn-xs"><span class="glyphicon glyphicon-edit"></span> Módosítás</a></td>

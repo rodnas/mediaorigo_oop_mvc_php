@@ -12,7 +12,7 @@ if ($uri[1] === 'edit') {
     $form_action = "/mvc03/index.php/transport/create";
 }
 
-$valVehicle_id = isset($transport['vehicle_id']) ? $transport['vehicle'] : '';
+$valVehicle_id = isset($transport['vehicle_id']) ? $transport['vehicle_id'] : '';
 $valDriver_id = isset($transport['driver_id']) ? $transport['driver_id'] : '';
 $valOrder_date = isset($transport['order_date']) ? $transport['order_date'] : '';
 $valId = isset($transport['id']) ? $transport['id'] : '';
@@ -30,12 +30,41 @@ $valId = isset($transport['id']) ? $transport['id'] : '';
 
         <div class="form-group">
             <label for="vehicle_id">Jármű</label>
-            <input name="vehicle_id" type="text" value="<?= $valVehicle_id ?>" class="form-control" id="vehicle_id" placeholder="Jármű">
+	        <select name="vehicle_id" class="form-control" id="vehicle_id" style="height: 34px;">
+		    <option value='0'>----</option>
+	            <?php foreach($vehicles as $vehicle): ?>
+		    <?php 
+				if ($vehicle['id'] == $valVehicle_id) {
+					$selected = ' SELECTED';
+				} else {
+					$selected =  ''; 
+				}
+		    ?>
+	            <option value="<?php echo $vehicle['id']; ?>" <?php echo $selected; ?>>
+	                <?php echo $vehicle['lpn']; ?>
+	            </option>
+	            <?php endforeach; ?>
+	        </select>
         </div>
 
         <div class="form-group">
             <label for="driver_id">Sofőr</label>
-            <input name="driver_id" type="text" value="<?= $valDriver_id ?>" class="form-control" id="driver_id" placeholder="Sofőr">
+	        <select name="driver_id" id="driver_id" class="form-control" style="height: 34px;">
+		    <option value='0'>----</option>
+	            <?php foreach($drivers as $driver): ?>
+		    <?php 
+				if ($driver['id'] == $valDriver_id) {
+					$selected = ' SELECTED';
+				} else {
+					$selected =  ''; 
+				}
+		    ?>
+	            <option value="<?php echo $driver['id']; ?>" <?php echo $selected; ?>>
+	                <?php echo $driver['name']; ?>
+	            </option>
+	            <?php endforeach; ?>
+	        </select>
+
         </div>
 
         <div class="form-group">

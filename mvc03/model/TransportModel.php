@@ -11,7 +11,12 @@ class TransportModel{
     {
         $link = $this->db->openDbConnection();
 
-        $result = $link->query('SELECT * FROM transport ORDER BY id');
+//        $result = $link->query('SELECT * FROM transport ORDER BY id');
+        $result = $link->query('
+		SELECT *, 
+			(SELECT lpn FROM vehicle WHERE id=transport.vehicle_id) AS vehicleName,
+			(SELECT name FROM driver WHERE id=transport.driver_id) AS driverName FROM transport');
+
 
         $driver = array();
         while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
@@ -79,4 +84,69 @@ class TransportModel{
 
         $this->db->closeDbConnection($link);
     }
+
+    public function getVehicles()
+    {
+        $link = $this->db->openDbConnection();
+
+        $result = $link->query('SELECT * FROM vehicle ORDER BY id');
+
+        $vehicles = array();
+        while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
+            $vehicles[] = $row;
+        }
+        $this->db->closeDbConnection($link);
+
+        
+	return $vehicles;
+    }
+
+    public function getDrivers()
+    {
+        $link = $this->db->openDbConnection();
+
+        $result = $link->query('SELECT * FROM driver ORDER BY id');
+
+        $drivers = array();
+        while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
+            $drivers[] = $row;
+        }
+        $this->db->closeDbConnection($link);
+
+        
+	return $drivers;
+    }
+
+    public function getVehicleId($id)
+    {
+        $link = $this->db->openDbConnection();
+
+        $query = 'SELECT * FROM vehicle WHERE  id=:id';
+        $statement = $link->prepare($query);
+        $statement->bindValue(':id', $id, PDO::PARAM_INT);
+        $statement->execute();
+
+        $row = $statement->fetch(PDO::FETCH_ASSOC);
+
+        $this->db->closeDbConnection($link);
+
+        return $row;
+    }
+
+    public function getDriverId($id)
+    {
+        $link = $this->db->openDbConnection();
+
+        $query = 'SELECT * FROM driver WHERE  id=:id';
+        $statement = $link->prepare($query);
+        $statement->bindValue(':id', $id, PDO::PARAM_INT);
+        $statement->execute();
+
+        $row = $statement->fetch(PDO::FETCH_ASSOC);
+
+        $this->db->closeDbConnection($link);
+
+        return $row;
+    }
+
 }
