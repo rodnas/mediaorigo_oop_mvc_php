@@ -1,4 +1,4 @@
-<!-- view/music/list.php -->
+<!-- view/vehicle/list.php -->
 <?php $title = 'Jármű' 
 ?>
 
@@ -24,9 +24,9 @@
             <td><?= $row['type'] ?></td>
             <td><?= $row['lpn'] ?></td>
             <td><?= $row['year'] ?></td>
-            <td><a href="/mvc03/index.php/vehicle/detail?id=<?= $row['id'] ?>" class="btn btn-success btn-xs"> Detail</a></td>
-            <td><a href="/mvc03/index.php/vehicle/edit?id=<?= $row['id'] ?>" class="btn btn-warning btn-xs"><span class="glyphicon glyphicon-edit"></span> Edit</a></td>
-            <td><a href="/mvc03/index.php/vehicle/delete?id=<?= $row['id']?>" onclick="return confirm('Anda yakin akan menghapus data ini?')" class="btn btn-danger btn-xs"> <span class="glyphicon glyphicon-trash"></span> Delete</a></td>
+            <td><a href="/mvc03/index.php/vehicle/detail?id=<?= $row['id'] ?>" class="btn btn-success btn-xs"> Adatok</a></td>
+            <td><a href="/mvc03/index.php/vehicle/edit?id=<?= $row['id'] ?>" class="btn btn-warning btn-xs"><span class="glyphicon glyphicon-edit"></span> Módosítás</a></td>
+            <td><a href="/mvc03/index.php/vehicle/delete?id=<?= $row['id']?>" onclick="return confirm('Anda yakin akan menghapus data ini?')" class="btn btn-danger btn-xs"> <span class="glyphicon glyphicon-trash"></span> Törlés</a></td>
         </tr>
         <?php endforeach ?>
     </table>

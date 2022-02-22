@@ -1,4 +1,4 @@
-<!-- view/music/detail.php -->
+<!-- view/vehicle/detail.php -->
 <?php $title = 'Jármű adatok' ?>
 
 <?php ob_start() ?>
@@ -6,7 +6,7 @@
 
     <a href="/mvc03/index.php/vehicle" class="btn btn-primary btn-sm">Vissza</a>
     <dl>
-        <dt>Név : </dt>
+        <dt>Típus : </dt>
         <dd><?= $vehicle['type'] ?></dd>
         <dt>Rendszám : </dt>
         <dd><?= $vehicle['lpn'] ?></dd>

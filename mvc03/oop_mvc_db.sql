@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2022. Feb 22. 08:18
+-- Létrehozás ideje: 2022. Feb 22. 09:25
 -- Kiszolgáló verziója: 10.4.21-MariaDB
 -- PHP verzió: 7.3.30
 
@@ -20,6 +20,31 @@ SET time_zone = "+00:00";
 --
 -- Adatbázis: `oop_mvc_db`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Tábla szerkezet ehhez a táblához `driver`
+--
+
+CREATE TABLE `driver` (
+  `id` bigint(11) UNSIGNED NOT NULL,
+  `name` varchar(50) COLLATE utf8_bin DEFAULT NULL,
+  `year` year(4) DEFAULT NULL,
+  `active` int(1) UNSIGNED DEFAULT 1,
+  `lang_id` int(2) UNSIGNED NOT NULL DEFAULT 0,
+  `insert_user_id` bigint(20) UNSIGNED DEFAULT NULL,
+  `insert_when` datetime DEFAULT NULL,
+  `modify_user_id` bigint(20) UNSIGNED DEFAULT NULL,
+  `modify_when` datetime DEFAULT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+--
+-- A tábla adatainak kiíratása `driver`
+--
+
+INSERT INTO `driver` (`id`, `name`, `year`, `active`, `lang_id`, `insert_user_id`, `insert_when`, `modify_user_id`, `modify_when`) VALUES
+(1, 'Nyomaseg BobÃ³', 1980, 1, 0, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -54,6 +79,12 @@ INSERT INTO `vehicle` (`id`, `type`, `lpn`, `year`, `active`, `lang_id`, `insert
 --
 
 --
+-- A tábla indexei `driver`
+--
+ALTER TABLE `driver`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- A tábla indexei `vehicle`
 --
 ALTER TABLE `vehicle`
@@ -62,6 +93,12 @@ ALTER TABLE `vehicle`
 --
 -- A kiírt táblák AUTO_INCREMENT értéke
 --
+
+--
+-- AUTO_INCREMENT a táblához `driver`
+--
+ALTER TABLE `driver`
+  MODIFY `id` bigint(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT a táblához `vehicle`
