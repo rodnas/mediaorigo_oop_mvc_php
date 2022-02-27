@@ -9,5 +9,4 @@ and don't forget to import this database : db_latmusic.sql on mysql,mariadb,etc
 * WAMPP,XAMPP,etc
 
 
-## Results
-CRUD Menu and Viewer List ![Image Insert](https://github.com/venomofcode/pdomvc/blob/master/images/Insert.JPG?raw=true)
+
