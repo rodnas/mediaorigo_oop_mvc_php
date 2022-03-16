@@ -1,4 +1,4 @@
-"# mediaorigo_oop_mvc_php"
+"# oop_mvc_php"
 
 git init git add README.md 
 git commit -m "first commit" 
