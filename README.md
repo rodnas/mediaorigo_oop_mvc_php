@@ -3,7 +3,7 @@
 git init git add README.md 
 git commit -m "first commit" 
 git branch -M main 
-git remote add origin https://github.com/rodnas/mediaorigo_oop_mvc_php.git 
+git remote add origin https://github.com/rodnas/oop_mvc_php.git 
 git push -u origin main
 
 PHP (OOP, MVC) version:
